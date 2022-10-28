@@ -4,12 +4,15 @@ import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import { Dayjs } from 'dayjs';
-
+import Card from './Card';
+import {data }from "../utils/data"
+ 
 
 const Searchbar = () => {
     const [location, setlocation] = useState("new york");
     const [price, setprice] = useState("500-2500");
     const [property, setproperty] = useState("house");
+    const [search, setsearch] = useState("");
     const handleLocation = (value) => {
         setlocation(value);
     }
@@ -19,11 +22,26 @@ const Searchbar = () => {
     const handleProperty = (value) => {
         setproperty(value);
     }
+    const handlebox = (value) => {
+        console.log(value)
+        setsearch(value);
+    }
     const [value, setvalue] = useState(Dayjs);
-    
+    const handleClick = () => {
+        // data = handleSearch();
+    }
+    const handleSearch = () => {
+        const arr = price.split("-");
+        return data.filter((item)=>(
+            item.propertyType.toLowerCase().includes(property) ||
+            item.location.toLowerCase().includes(location) ||
+            item.property.toLowerCase().includes(search) || 
+            (parseInt(item.price) >= arr[0] && parseInt(item.price)<=arr[1])
+        ))
+    }
     return (
         <div className='ml-auto mr-auto h-64 addwidth'>
-            <div className='flex w-full'>
+            <div className='flex w-full items-center'>
                 <div className='font-semibold text-4xl'>
                     Search properties to rent
                 </div>
@@ -36,6 +54,7 @@ const Searchbar = () => {
                         style={{
                             backgroundColor: "white"
                         }}
+                        onChange={(e)=>{handlebox(e.target.value)}}
                         disableUnderline
                     />
                 </div>
@@ -112,16 +131,23 @@ const Searchbar = () => {
                         <option value="apartment">Apartments</option>
                     </NativeSelect>
                 </div>
-
-                {/* divide */}
-                <div className='border-solid border-2 border-neutral-300 h-16'></div>
+{/* divide */}
+<div className='border-solid border-2 border-neutral-300 h-16'></div>
 
                 <div className='flex flex-col mx-10'>
-                    <button className='rounded-lg bg-indigo-500 text-white h-14 w-24 font-semibold'>
+                    <button className='rounded-lg bg-indigo-500 text-white h-14 w-24 font-semibold' onClick={handleClick}>
                         Search
                     </button>
                 </div>
             </div>
+            <div className='mt-10 mb-10 ml-auto mr-auto cards grid'>
+            {handleSearch().map((item)=>(
+                // console.log(item.img)
+                <Card  price={item.price} img={item.img} property={item.property} address={item.address} bed={item.bed} bath={item.bath} area={item.area} />
+          
+            ))}
+          
+        </div>
         </div>
     )
 }
