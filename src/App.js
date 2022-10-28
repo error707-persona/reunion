@@ -11,15 +11,7 @@ function App() {
         <div className='mt-24'>
           <Searchbar />
         </div>
-        <div className='mt-10 ml-auto mr-auto cards grid'>
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-        </div>
+        
       </div>
 
     </div>
