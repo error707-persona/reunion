@@ -1,18 +1,27 @@
 
+import Card from './components/Card';
 import './App.css';
 import NavBar from './components/NavBar';
 import Searchbar from './components/Searchbar';
 function App() {
   return (
     <div className="App">
-      <NavBar/>
-      <div className='flex justify-center border'>
-        <div className='mt-40'>
-          <Searchbar/>
+      <NavBar />
+      <div className='flex flex-col justify-center border'>
+        <div className='mt-24'>
+          <Searchbar />
         </div>
-        
+        <div className='mt-10 ml-auto mr-auto cards grid'>
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+        </div>
       </div>
-      
+
     </div>
   );
 }

@@ -40,3 +40,27 @@
     transform: rotate(360deg);
   }
 }
+
+.addwidth{
+  width:950px;
+}
+
+.view:hover{
+  color: rgb(79 70 229);
+  background-color: rgb(165 180 252);
+
+}
+
+.card{
+  border-radius: 0.5rem;
+  background-color: rgb(255, 255, 255);
+  width: 300px;
+  height: 300px;
+}
+
+.cards{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+
+}
