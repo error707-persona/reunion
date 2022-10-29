@@ -1,5 +1,3 @@
-
-import Card from './components/Card';
 import './App.css';
 import NavBar from './components/NavBar';
 import Searchbar from './components/Searchbar';
@@ -11,9 +9,7 @@ function App() {
         <div className='mt-24'>
           <Searchbar />
         </div>
-        
       </div>
-
     </div>
   );
 }
