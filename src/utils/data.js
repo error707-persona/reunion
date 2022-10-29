@@ -206,7 +206,7 @@ export const data = [
     {
         property: "LightTail hotel",
         price: "6550",
-        address: "2699 Green Valley, Dubai",
+        address: "2699 Green Valley, Paris",
         bed: "1",
         bath: "1",
         propertyType: "apartment",
@@ -230,7 +230,7 @@ export const data = [
     {
         property: "LightTail Palace",
         price: "950",
-        address: "2699 Green Valley, Dubai",
+        address: "2699 Green Valley, Paris",
         bed: "1",
         bath: "1",
         propertyType: "villa",
