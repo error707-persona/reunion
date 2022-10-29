@@ -29,14 +29,14 @@ const Searchbar = () => {
 
     const handleClick = () => {
         setitems(handleSearch());
-        // console.log(items)
+        
     }
     const handleSearch = () => {
         const arr = price.split("-");
         
         return data.filter((item) => (
             // item.property.toLowerCase().includes(search.toLowerCase()) || 
-            Date(item.availabe) <= Date(a.date) &&
+            // Date(item.availabe) <= Date(a.date) ||
             item.propertyType.toLowerCase().includes(property) &&
             item.location.toLowerCase().includes(location) &&
             parseInt(item.price) >= parseInt(arr[0]) && parseInt(item.price) <= parseInt(arr[1])
@@ -69,8 +69,6 @@ const Searchbar = () => {
 
             <div className=' mt-10 flex items-center justify-center bg-white h-28 w-full rounded-lg text-neutral-400 '>
                 <div className='flex mx-5'>
-
-
                     <div className='mx-5 flex flex-col justify-center items-center'>
                         <span className='text-sm'>Location</span>
 
@@ -79,14 +77,11 @@ const Searchbar = () => {
                             onChange={(e) => handleLocation(e.target.value)}
                             style={{ minWidth: "100px", fontWeight: 'bold' }}
                             disableUnderline={true}
-
                         >
-                            
                             <option value="new york">New York</option>
                             <option value="paris">Paris</option>
                             <option value="london">London</option>
-                            <option value="dubai">Dubai</option>
-                            <option value="belgium">Belgium</option>
+                            
                         </NativeSelect>
                     </div>
                     {/* divide */}
@@ -147,13 +142,9 @@ const Searchbar = () => {
                 <button className='bg-red-600 ml-auto rounded-lg p-1' onClick={handleClear}><IconFilterOff color="white"/></button>
             </div>
             <div className='mt-10 mb-10 ml-auto mr-auto cards grid'>
-
                 {items.map((item) => (
-
                     <Card price={item.price} imgs={item.img} date={item.availabe} property={item.property} address={item.address} bed={item.bed} bath={item.bath} area={item.area} />
-
                 ))}
-
             </div>
         </div>
 
