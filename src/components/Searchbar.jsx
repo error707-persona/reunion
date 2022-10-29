@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { TextField, NativeSelect } from '@mui/material';
 import Card from './Card';
 import { data } from "../utils/data"
+import {IconFilterOff} from "@tabler/icons"
 import MuiPicker from './MuiPicker';
 import dateContext from '../context/DateContext';
 import { useContext } from 'react';
@@ -40,6 +41,9 @@ const Searchbar = () => {
             item.location.toLowerCase().includes(location) &&
             parseInt(item.price) >= parseInt(arr[0]) && parseInt(item.price) <= parseInt(arr[1])
         ))
+    }
+    const handleClear = () => {
+        setitems(data);
     }
     return (
 
@@ -138,6 +142,9 @@ const Searchbar = () => {
                         </button>
                     </div>
                 </div>
+            </div>
+            <div className=' flex w-full items-center mt-2'>
+                <button className='bg-red-600 ml-auto rounded-lg p-1' onClick={handleClear}><IconFilterOff color="white"/></button>
             </div>
             <div className='mt-10 mb-10 ml-auto mr-auto cards grid'>
 
