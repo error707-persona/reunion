@@ -1,7 +1,11 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 import {IconHeart,IconAnalyze, IconBath,IconBed } from "@tabler/icons"
 const Card = ({price, imgs, date, property, address, bed, bath, area  }) => {
+    const [heart, setheart] = useState(false);
+    const handleHeart = () => {
+        setheart(!heart);
+    }
   return (
     <div className='card'>
         <img src={imgs} className='w-full h-1/2 rounded-md' alt="house" />
@@ -9,7 +13,7 @@ const Card = ({price, imgs, date, property, address, bed, bath, area  }) => {
             <div>
             <span className='ml-5 text-indigo-400 text-xl font-semibold'>${price}</span> <span className='text-neutral-300 text-xs'>/month</span>
             </div>
-             <button className=' flex justify-center items-center ml-auto mr-5 border-2 border-solid border-indigo-600 rounded-full w-8 h-8'><IconHeart color='rgb(79 70 229)'/></button>
+             <button className=' flex justify-center items-center ml-auto mr-5 border-2 border-solid border-indigo-600 rounded-full w-8 h-8'><IconHeart color='rgb(79 70 229)' fill={(heart)?"rgb(79 70 229)":"white"} onClick={handleHeart}/></button>
         </div>
 
         <div className='w-full flex item-center'>
