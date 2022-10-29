@@ -1,14 +1,14 @@
 export const data = [
     {
         property:"Palm Harbour",
-        price:"2,095",
+        price:"2,500",
         address: "2699 Green Valley Highligh lake",
         bed:"3",
         bath:"1",
         propertyType: "apartment",
         location:"new york",
         area:"5x7m2",
-        img: ""
+        img: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YmVhdXRpZnVsJTIwaG91c2V8ZW58MHx8MHx8&w=1000&q=80"
     },
     {
         property:"Beverly SpringField",
@@ -19,7 +19,7 @@ export const data = [
         propertyType: "house",
         location:"london",
         area:"6x7.5m2",
-        img:"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.forbes.com%2Fhome-improvement%2Fliving%2Ftypes-of-house-styles%2F&psig=AOvVaw1ICTEa9YswygWe5NUClNlu&ust=1667056451461000&source=images&cd=vfe&ved=0CA0QjRxqFwoTCICO_q6bg_sCFQAAAAAdAAAAABAE"
+        img:"https://images.adsttc.com/media/images/5efe/1f7f/b357/6540/5400/01d7/newsletter/archdaily-houses-104.jpg?1593712501"
     },
     {
         property:"Faulkner Ave",
@@ -30,7 +30,7 @@ export const data = [
         propertyType: "villa",
         location:"paris",
         area:"8x10m2",
-        img:"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.com%2Faldeguer68%2Fbeautiful-houses%2F&psig=AOvVaw1ICTEa9YswygWe5NUClNlu&ust=1667056451461000&source=images&cd=vfe&ved=0CA0QjRxqFwoTCICO_q6bg_sCFQAAAAAdAAAAABAN"
+        img:"https://images.adsttc.com/media/images/62de/d6a6/c8bb/b201/6567/7513/newsletter/houses-in-the-forest-architekturos-linija_16.jpg?1658771505"
     },
     {
         property:"Fountain Hotel",
@@ -41,10 +41,10 @@ export const data = [
         propertyType: "house",
         location:"belgium",
         area:"10x10m2",
-        img:"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.archdaily.com%2F940445%2Fab-house-bwa&psig=AOvVaw1ICTEa9YswygWe5NUClNlu&ust=1667056451461000&source=images&cd=vfe&ved=0CA0QjRxqFwoTCICO_q6bg_sCFQAAAAAdAAAAABAS"
+        img:"https://www.architecturalrecord.com/ext/resources/Issues/2022/04-April/House-in-Colima-01.jpg"
     },
     {
-        property:"Faulkner Ave",
+        property:"LightTail kingdom",
         price:"6,550",
         address: "2699 Green Valley Highligh lake",
         bed:"1",
@@ -52,18 +52,18 @@ export const data = [
         propertyType: "apartment",
         location:"dubai",
         area:"8x8.7m2",
-        img:"https://www.google.com/url?sa=i&url=https%3A%2F%2Farchello.com%2Fproject%2Fcontemporary-modern-house-design&psig=AOvVaw1ICTEa9YswygWe5NUClNlu&ust=1667056451461000&source=images&cd=vfe&ved=0CA0QjRxqFwoTCICO_q6bg_sCFQAAAAAdAAAAABAX"
+        img:"https://assets-news.housing.com/news/wp-content/uploads/2022/01/11171226/World%E2%80%99s-15-Most-Beautiful-Houses-That-Will-Leave-You-Awestruck-02.png"
     },
     {
-        property:"Faulkner Ave",
-        price:"6,550",
+        property:"Sovana Palace",
+        price:"0",
         address: "2699 Green Valley Highligh lake",
         bed:"1",
         bath:"1",
-        propertyType: "house",
+        propertyType: "villa",
         location:"tokyo",
         area:"8x6m2",
-        img:"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.99acres.com%2Findependent-house-in-vijayawada-ffid&psig=AOvVaw1ICTEa9YswygWe5NUClNlu&ust=1667056451461000&source=images&cd=vfe&ved=0CA0QjRxqFwoTCICO_q6bg_sCFQAAAAAdAAAAABAh"
+        img:"https://images.adsttc.com/media/images/5ecd/d4ac/b357/65c6/7300/009d/large_jpg/02C.jpg?1590547607"
     },
 ];
 

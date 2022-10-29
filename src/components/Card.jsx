@@ -1,10 +1,10 @@
 import React from 'react'
 import houseimg from "./house.jpg"
 import {IconHeart,IconAnalyze, IconBath,IconBed } from "@tabler/icons"
-const Card = ({price, property, address, bed, bath, area  }) => {
+const Card = ({price, imgs, property, address, bed, bath, area  }) => {
   return (
     <div className='card'>
-        <img src={houseimg} className='w-full h-1/2 rounded-md' alt="house" />
+        <img src={imgs} className='w-full h-1/2 rounded-md' alt="house" />
         <div className='flex mt-2'>
             <div>
             <span className='ml-5 text-indigo-400 font-semibold'>${price}</span> <span className='text-neutral-300 text-xs'>/month</span>
