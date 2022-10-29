@@ -11,6 +11,7 @@ const Searchbar = () => {
     const [property, setproperty] = useState("house");
     const [search, setsearch] = useState("");
     const a = useContext(dateContext);
+    const [items, setitems] = useState(data);
     const handleLocation = (value) => {
         setlocation(value);
     }
@@ -26,16 +27,18 @@ const Searchbar = () => {
     }
 
     const handleClick = () => {
-        // data = handleSearch();
+        setitems(handleSearch());
+        // console.log(items)
     }
     const handleSearch = () => {
         const arr = price.split("-");
-
+        
         return data.filter((item) => (
-            item.propertyType.toLowerCase().includes(property) ||
-            item.location.toLowerCase().includes(location) ||
-            item.property.toLowerCase().includes(search) ||
-            (parseInt(item.price) >= parseInt(arr[0]) && parseInt(item.price) <= parseInt(arr[1]) && Date(item.availabe) >= Date(a.date))
+            // item.property.toLowerCase().includes(search.toLowerCase()) || 
+            Date(item.availabe) <= Date(a.date) &&
+            item.propertyType.toLowerCase().includes(property) &&
+            item.location.toLowerCase().includes(location) &&
+            parseInt(item.price) >= parseInt(arr[0]) && parseInt(item.price) <= parseInt(arr[1])
         ))
     }
     return (
@@ -74,7 +77,7 @@ const Searchbar = () => {
                             disableUnderline={true}
 
                         >
-                            <option value=""><em>None</em></option>
+                            
                             <option value="new york">New York</option>
                             <option value="paris">Paris</option>
                             <option value="london">London</option>
@@ -101,7 +104,7 @@ const Searchbar = () => {
                             style={{ minWidth: "110px", fontWeight: 'bold' }}
                             disableUnderline={true}
                         >
-                            <option value=""><em>None</em></option>
+                            
                             <option value="500-2500">500-2500</option>
                             <option value="2500-4500">2500-4500</option>
                             <option value="4500-6500">4500-6500</option>
@@ -120,7 +123,7 @@ const Searchbar = () => {
                             style={{ minWidth: "115px", fontWeight: 'bold' }}
                             disableUnderline={true}
                         >
-                            <option value=""><em>None</em></option>
+                            
                             <option value="house">Houses</option>
                             <option value="villa">Villa</option>
                             <option value="apartment">Apartments</option>
@@ -138,7 +141,7 @@ const Searchbar = () => {
             </div>
             <div className='mt-10 mb-10 ml-auto mr-auto cards grid'>
 
-                {handleSearch().map((item) => (
+                {items.map((item) => (
 
                     <Card price={item.price} imgs={item.img} date={item.availabe} property={item.property} address={item.address} bed={item.bed} bath={item.bath} area={item.area} />
 
