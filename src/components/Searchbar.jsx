@@ -36,7 +36,7 @@ const Searchbar = () => {
         
         return data.filter((item) => (
             // item.property.toLowerCase().includes(search.toLowerCase()) || 
-            Date(item.availabe) <= Date(a.date) ||
+            // Date(item.availabe) <= Date(a.date) ||
             item.propertyType.toLowerCase().includes(property) &&
             item.location.toLowerCase().includes(location) &&
             parseInt(item.price) >= parseInt(arr[0]) && parseInt(item.price) <= parseInt(arr[1])
