@@ -173,7 +173,7 @@ export const data = [
         bed: "1",
         bath: "1",
         propertyType: "house",
-        location: "belgium",
+        location: "paris",
         area: "10x10m2",
         availabe: "2022-03-03",
         img: "https://www.architecturalrecord.com/ext/resources/Issues/2022/04-April/House-in-Colima-01.jpg"
@@ -185,7 +185,7 @@ export const data = [
         bed: "1",
         bath: "1",
         propertyType: "apartment",
-        location: "dubai",
+        location: "paris",
         area: "8x8.7m2",
         availabe: "2022-04-04",
         img: "https://assets-news.housing.com/news/wp-content/uploads/2022/01/11171226/World%E2%80%99s-15-Most-Beautiful-Houses-That-Will-Leave-You-Awestruck-02.png"
@@ -197,7 +197,7 @@ export const data = [
         bed: "1",
         bath: "1",
         propertyType: "villa",
-        location: "tokyo",
+        location: "london",
         area: "8x6m2",
         availabe: "2022-03-04",
         img: "https://images.adsttc.com/media/images/5ecd/d4ac/b357/65c6/7300/009d/large_jpg/02C.jpg?1590547607"
