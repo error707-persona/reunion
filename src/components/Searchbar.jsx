@@ -35,7 +35,7 @@ const Searchbar = () => {
         const arr = price.split("-");
         
         return data.filter((item) => (
-            item.property.toLowerCase().includes(search.toLowerCase()) || 
+            //item.property.toLowerCase().includes(search.toLowerCase()) || 
             // Date(item.availabe) <= Date(a.date) ||
             item.propertyType.toLowerCase().includes(property) &&
             item.location.toLowerCase().includes(location) &&
